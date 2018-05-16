@@ -48,16 +48,26 @@ def JS(d1,d2):
 def KL(t1,t2):
     return sum([t1[i] * math.log(t1[i]/t2[i]) for i in range(len(t1)) if t1[i] != 0 if t2[i] != 0])
 
-def writeFile(folder,csvfile):
+def writeFile(folder,csvfile,label):
+    ctr=1
     f2 = csv.writer(csvfile,delimiter=",")
+    #print(sorted(os.listdir(folder)))
     for f in sorted(os.listdir(folder)):
+        #print(os.path.join(folder,f))
+        print(ctr)
         inputFile = open(os.path.join(folder,f),"r")
         reader= list(csv.reader(inputFile))
+        #print (reader)
+        print ("hey \n",label)
+        #print (reader[2])
         tweet = reader[1][2]
         prev_tweet = ""
         flist = []
-        
-        for i in range(2,len(reader)):
+        #print (reader[1][2])
+        print (len(reader))
+        for i in range(2,len(reader)):            
+            print (i)
+            print (reader[i][2])
             prev_tweet += reader[i][2]
         
         d1 = word_length_distribution(tweet)
@@ -66,19 +76,19 @@ def writeFile(folder,csvfile):
         flist += feature_syllables(tweet)
         flist += word_length_distribution_feature(tweet)
         flist.append(JS(d1,d2))
-
+        flist.append(label)
         f2.writerow(flist)
-
         inputFile.close()
+        ctr=ctr+1
 
         
 def main():
     pwd = os.getcwd()
-    norm = pwd + "/normal_with_past_PP"
-    sarc = pwd + "/sarcastic_with_past_PP"
-    csvfile = open("feature6WLD.csv","w")
-    writeFile(norm,csvfile)
-    writeFile(sarc,csvfile)
+    norm = pwd + "/../dataset/normal_with_past_PP"
+    sarc = pwd + "/../dataset/sarcastic_with_past_PP"
+    csvfile = open("feature6WLD.csv","a")
+    writeFile(norm,csvfile,0)
+    writeFile(sarc,csvfile,1)
     csvfile.close()
 
 

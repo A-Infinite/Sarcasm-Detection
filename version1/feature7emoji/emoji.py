@@ -30,7 +30,6 @@ def get_pos_features(words):
 		print (item.lower())
 		print (type(item.lower()))
 		try:
-
 			tokenized = nltk.word_tokenize(item.lower())
 			print ('ok')
 			tagged = nltk.pos_tag(tokenized)
@@ -146,7 +145,7 @@ def get_emoji_Features(raw_tweet):
 # get_emoji_Features("Well i just CANT stop singing/watching/HUMMING #IkVaariAa !! ❤️🎤🎧 Its on loop..WOW What about you? 😜😁")
 # get_emoji_Features("ARE YOU KIDDING ME?")
 
-def writeFile(folder, csvfile):
+def writeFile(folder, csvfile,label):
 	f5 = csv.writer(csvfile,delimiter=",")
 	for f in sorted(os.listdir(folder)):
 		inputFile = open(os.path.join(folder,f),"r")
@@ -155,14 +154,15 @@ def writeFile(folder, csvfile):
 		tweet = reader[1][2]
 		tweet =tweet.strip()
 		featurelist=get_emoji_Features(tweet)
+		featurelist.append(label)
 		f5.writerow(featurelist)
 		inputFile.close()		
 
 
 pwd = os.getcwd()
-norm = pwd + "/normal_with_past_PP"
-sarc = pwd + "/sarcastic_with_past_PP"
-csvfile = open("feature7emoji.csv","w")
-writeFile(norm,csvfile)
-writeFile(sarc,csvfile)
+norm = pwd + "/../dataset/normal_with_past_PP"
+sarc = pwd + "/../dataset/sarcastic_with_past_PP"
+csvfile = open("feature7emoji.csv","a")
+writeFile(norm,csvfile,0)
+writeFile(sarc,csvfile,1)
 csvfile.close()

@@ -1,0 +1,51 @@
+username,time,tweet
+arafabal,Tue Mar 01 05:29:33 IST 2016,0052 Temperature 55°C | Barometer 10277 mbar 12 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 90
+arafabal,Tue Mar 01 04:57:04 IST 2016,0017 Temperature 56°C | Barometer 10276 mbar 11 mbar last 30 hours | Wind 03 m/s 225° | Rain 00 mm/hr | Humidity 89
+arafabal,Tue Mar 01 04:25:05 IST 2016,2347 Temperature 58°C | Barometer 10278 mbar 15 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 87
+arafabal,Tue Mar 01 03:54:06 IST 2016,2317 Temperature 61°C | Barometer 10276 mbar 09 mbar last 30 hours | Wind 03 m/s 225° | Rain 00 mm/hr | Humidity 88
+arafabal,Tue Mar 01 03:20:06 IST 2016,2242 Temperature 63°C | Barometer 10273 mbar 09 mbar last 30 hours | Wind 07 m/s 158° | Rain 00 mm/hr | Humidity 85
+arafabal,Tue Mar 01 02:48:04 IST 2016,2207 Temperature 69°C | Barometer 10265 mbar 04 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 82
+arafabal,Tue Mar 01 02:13:06 IST 2016,2137 Temperature 73°C | Barometer 10265 mbar 08 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 82
+arafabal,Tue Mar 01 01:40:05 IST 2016,2102 Temperature 80°C | Barometer 10265 mbar  N/A last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 79
+arafabal,Tue Mar 01 01:08:05 IST 2016,2027 Temperature 88°C | Barometer 10268 mbar 18 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 77
+arafabal,Tue Mar 01 00:33:41 IST 2016,1957 Temperature 97°C | Barometer 10265 mbar 18 mbar last 30 hours | Wind 10 m/s 180° | Rain 00 mm/hr | Humidity 73
+arafabal,Tue Mar 01 00:01:06 IST 2016,1922 Temperature 107°C | Barometer 10264 mbar 15 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 67
+arafabal,Mon Feb 29 23:29:05 IST 2016,1852 Temperature 109°C | Barometer 10258 mbar 10 mbar last 30 hours | Wind 10 m/s 22° | Rain 00 mm/hr | Humidity 65
+arafabal,Mon Feb 29 22:56:07 IST 2016,1817 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 22:23:06 IST 2016,1744 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 21:47:34 IST 2016,1709 Temperature 121°C | Barometer 10249 mbar -00 mbar last 30 hours | Wind 27 m/s 45° | Rain 00 mm/hr | Humidity 61
+arafabal,Mon Feb 29 21:16:05 IST 2016,1639 Temperature 120°C | Barometer 10248 mbar  N/A last 30 hours | Wind 14 m/s 0° | Rain 00 mm/hr | Humidity 62
+arafabal,Mon Feb 29 20:44:05 IST 2016,1609 Temperature 118°C | Barometer 10247 mbar  N/A last 30 hours | Wind 10 m/s 0° | Rain 00 mm/hr | Humidity 62
+arafabal,Mon Feb 29 20:09:05 IST 2016,1534 Temperature 121°C | Barometer 10247 mbar 02 mbar last 30 hours | Wind 41 m/s 0° | Rain 00 mm/hr | Humidity 59
+arafabal,Mon Feb 29 19:35:34 IST 2016,1459 Temperature 116°C | Barometer 10249 mbar  N/A last 30 hours | Wind 31 m/s 0° | Rain 00 mm/hr | Humidity 65
+arafabal,Mon Feb 29 19:03:06 IST 2016,1424 Temperature 111°C | Barometer 10249 mbar  N/A last 30 hours | Wind 10 m/s 90° | Rain 00 mm/hr | Humidity 65
+arafabal,Mon Feb 29 18:30:40 IST 2016,1354 Temperature 111°C | Barometer 10250 mbar 15 mbar last 30 hours | Wind 17 m/s 315° | Rain 00 mm/hr | Humidity 62
+arafabal,Mon Feb 29 17:59:06 IST 2016,1319 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 17:23:33 IST 2016,1249 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 16:53:05 IST 2016,1214 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 16:20:04 IST 2016,1144 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 15:48:36 IST 2016,1114 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 15:16:05 IST 2016,1039 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 14:45:04 IST 2016,1009 Temperature 105°C | Barometer 10229 mbar 25 mbar last 30 hours | Wind 27 m/s 158° | Rain 00 mm/hr | Humidity 72
+arafabal,Mon Feb 29 14:11:37 IST 2016,0934 Temperature 100°C | Barometer 10222 mbar 22 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 76
+arafabal,Mon Feb 29 13:38:33 IST 2016,0904 Temperature 98°C | Barometer 10216 mbar 22 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 78
+arafabal,Mon Feb 29 13:06:05 IST 2016,0829 Temperature 87°C | Barometer 10213 mbar 23 mbar last 30 hours | Wind 00 m/s N/A | Rain 00 mm/hr | Humidity 80
+arafabal,Mon Feb 29 12:33:37 IST 2016,0754 Temperature N/A | Barometer N/A  N/A last 30 hours | Wind N/A N/A | Rain 00 mm/hr | Humidity N/A
+arafabal,Mon Feb 29 12:02:03 IST 2016,0724 Temperature 84°C | Barometer 10204 mbar 20 mbar last 30 hours | Wind 07 m/s 270° | Rain 00 mm/hr | Humidity 81
+arafabal,Mon Feb 29 11:30:04 IST 2016,0654 Temperature 85°C | Barometer 10202 mbar 21 mbar last 30 hours | Wind 07 m/s 270° | Rain 00 mm/hr | Humidity 80
+arafabal,Mon Feb 29 10:58:04 IST 2016,0619 Temperature 87°C | Barometer 10197 mbar 18 mbar last 30 hours | Wind 14 m/s 225° | Rain 00 mm/hr | Humidity 79
+arafabal,Mon Feb 29 10:27:04 IST 2016,0549 Temperature 88°C | Barometer 10193 mbar 16 mbar last 30 hours | Wind 07 m/s 270° | Rain 00 mm/hr | Humidity 78
+arafabal,Mon Feb 29 09:53:33 IST 2016,0519 Temperature 92°C | Barometer 10189 mbar 17 mbar last 30 hours | Wind 14 m/s 270° | Rain 00 mm/hr | Humidity 77
+arafabal,Mon Feb 29 09:21:54 IST 2016,0444 Temperature 89°C | Barometer 10183 mbar 14 mbar last 30 hours | Wind 20 m/s 270° | Rain 00 mm/hr | Humidity 80
+arafabal,Mon Feb 29 08:50:06 IST 2016,0414 Temperature 87°C | Barometer 10184 mbar 14 mbar last 30 hours | Wind 10 m/s 270° | Rain 00 mm/hr | Humidity 80
+arafabal,Mon Feb 29 08:18:03 IST 2016,0339 Temperature 86°C | Barometer 10181 mbar 12 mbar last 30 hours | Wind 17 m/s 248° | Rain 00 mm/hr | Humidity 79
+arafabal,Mon Feb 29 07:46:05 IST 2016,0309 Temperature 90°C | Barometer 10179 mbar 10 mbar last 30 hours | Wind 14 m/s 270° | Rain 00 mm/hr | Humidity 77
+arafabal,Mon Feb 29 07:13:02 IST 2016,0234 Temperature 92°C | Barometer 10175 mbar 10 mbar last 30 hours | Wind 27 m/s 270° | Rain 00 mm/hr | Humidity 75
+arafabal,Mon Feb 29 06:40:05 IST 2016,0204 Temperature 92°C | Barometer 10170 mbar 09 mbar last 30 hours | Wind 24 m/s 270° | Rain 00 mm/hr | Humidity 75
+arafabal,Mon Feb 29 06:07:05 IST 2016,0129 Temperature 100°C | Barometer 10170 mbar 13 mbar last 30 hours | Wind 03 m/s 270° | Rain 00 mm/hr | Humidity 71
+arafabal,Mon Feb 29 05:36:03 IST 2016,0059 Temperature 101°C | Barometer 10169 mbar 16 mbar last 30 hours | Wind 07 m/s 45° | Rain 00 mm/hr | Humidity 69
+arafabal,Mon Feb 29 05:05:09 IST 2016,0029 Temperature 101°C | Barometer 10168 mbar 18 mbar last 30 hours | Wind 31 m/s 0° | Rain 00 mm/hr | Humidity 64
+arafabal,Mon Feb 29 04:35:05 IST 2016,2359 Temperature 100°C | Barometer 10169 mbar 24 mbar last 30 hours | Wind 20 m/s 22° | Rain 00 mm/hr | Humidity 65
+arafabal,Mon Feb 29 04:00:06 IST 2016,2324 Temperature 100°C | Barometer 10164 mbar 21 mbar last 30 hours | Wind 24 m/s 0° | Rain 00 mm/hr | Humidity 68
+arafabal,Mon Feb 29 03:28:04 IST 2016,2249 Temperature 101°C | Barometer 10158 mbar 23 mbar last 30 hours | Wind 34 m/s 0° | Rain 00 mm/hr | Humidity 71
+arafabal,Mon Feb 29 02:57:05 IST 2016,2219 Temperature 100°C | Barometer 10156 mbar 23 mbar last 30 hours | Wind 41 m/s 0° | Rain 00 mm/hr | Humidity 67

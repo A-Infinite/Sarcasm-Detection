@@ -1,10 +1,8 @@
 # from textblob import TextBlob 
-
 #from PreProc import preprocess
 import csv
 #from ExtraPreProc import remove_punctuations, remove_stop_words, stem
 import os
-
 # path_normal = os.path.abspath("/home/jayati/Documents/sarcasmdet/Python Code") + "/normal_with_past"
 # fileListNormal  = os.listdir(path_normal)
 def getSentiStrength(w):
@@ -42,7 +40,7 @@ def get_feature2(filename):
 		neg_neu=0
 		f=[None]*10
 		for row in file_reader:
-			print ("*******************************")
+			#print ("*******************************")
 			# print num
 			num=num+1
 			# print row['tweet']
@@ -51,10 +49,11 @@ def get_feature2(filename):
 			#print (type(words))
 			#words= remove_punctuations(words)
 			#print (type(words))
-			words=remove_stop_words(words)
-			print (type(words))
-			words=stem(words)
-			print (type(words))
+			#words=remove_stop_words(words)
+			words = row['tweet']
+			#print (type(words))
+			#words=stem(words)
+			#print (type(words))
 			words=words.split(" ")
 			# print words
 			senti_score=0
@@ -125,28 +124,32 @@ def get_feature2(filename):
 		f[8]= float(neg_neg)/total
 		f[9]= float(neg_neu)/total
 		f[0]= f[i]
-		print (f)
+		#print (f)
 	tweet_file.close()	
 	return f
 
 # get_feature_1_2("/home/ameesha/Documents/data mining/feature1.2/user0.csv")
 
-def writeFile(folder, csvfile):
+def writeFile(folder, csvfile, label):
+	ctr=1
 	f5 = csv.writer(csvfile,delimiter=",")
 	for f in sorted(os.listdir(folder)):
+		print(ctr)
 		inputFile = os.path.join(folder,f)
 		# print (inputFile)
 		# reader = list(csv.reader(inputFile))
 		# tweet = reader[1][2]
 		# tweet =tweet.strip()
 		featurelist=get_feature2(inputFile)
+		featurelist.append(label)
 		f5.writerow(featurelist)
+		ctr=ctr+1
 		# inputFile.close()		
 
 pwd = os.getcwd()
-norm = pwd + "/normal_with_past_PP"
-sarc = pwd + "/sarcastic_with_past_PP"
-csvfile = open("feature2output.csv","w")
-writeFile(norm,csvfile)
-writeFile(sarc,csvfile)
+norm = pwd + "/../dataset/normal_with_past_PP"
+sarc = pwd + "/../dataset/sarcastic_with_past_PP"
+csvfile = open("feature2transProb.csv","a")
+writeFile(norm,csvfile,0)
+writeFile(sarc,csvfile,1)
 csvfile.close()

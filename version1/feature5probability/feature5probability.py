@@ -2,13 +2,14 @@ import csv
 import os
 
 pwd = os.getcwd()
-norm_input = pwd + "/normal_with_past_PP"
-sarc_input = pwd + "/sarcastic_with_past_PP"
-csvfile = open("feature5probability.csv","w")
+norm_input = pwd + "/../dataset/normal_with_past_PP"
+sarc_input = pwd + "/../dataset/sarcastic_with_past_PP"
+csvfile = open("feature5probability.csv","a")
 f5 = csv.writer(csvfile,delimiter=",")
 
-
+ctr =1
 for f in sorted(os.listdir(norm_input)):
+	print(ctr)
 	input_file = open(os.path.join(norm_input, f), "r")
 	reader = csv.reader(input_file)
 	reader = list(reader)
@@ -25,10 +26,13 @@ for f in sorted(os.listdir(norm_input)):
 	temp = []
 	temp.append(prob)
 	temp.append(tot_letts)
+	temp.append(0)
 	f5.writerow(temp)
 	input_file.close()
+	ctr=ctr+1
 
 for f in sorted(os.listdir(sarc_input)):
+	print(ctr)
 	input_file = open(os.path.join(sarc_input, f), "r")
 	reader = csv.reader(input_file)
 	reader = list(reader)
@@ -46,7 +50,9 @@ for f in sorted(os.listdir(sarc_input)):
 	temp = []
 	temp.append(prob)
 	temp.append(tot_letts)
+	temp.append(1)
 	f5.writerow(temp)
 	input_file.close()
+	ctr=ctr+1
 
 csvfile.close()

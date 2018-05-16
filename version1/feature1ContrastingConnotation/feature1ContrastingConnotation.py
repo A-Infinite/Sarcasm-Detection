@@ -7,7 +7,7 @@ import re
 import os
 import csv
 from nltk.stem.snowball import SnowballStemmer
-from ExtraPreProc import remove_stop_words
+#from ExtraPreProc import remove_stop_words
 # reload(sys)  
 # sys.setdefaultencoding('utf8')
 
@@ -30,7 +30,7 @@ def getSentiStrength(w):
 	if w in sentidict:
 		return sentidict[w]
 	else:
-		for key,value in sentidict.iteritems():
+		for key,value in sentidict.items():
 			if key.find(w):
 				return value
 		#print w
@@ -46,7 +46,7 @@ def getAffect(w):
 	if w in affectdict:
 		return affectdict[w]
 	else:
-		for key,value in affectdict.iteritems():
+		for key,value in affectdict.items():
 			if key.find(w):
 				return value
 		#print w
@@ -111,22 +111,24 @@ def contrastingFeatures(words):
 	return output
 
 
-def writeFile(folder, file_name):
+def writeFile(folder, file_name, label):
 	# checking presence of repeated characters
-	output_file = open(file_name, "w")
+	output_file = open(file_name, "a")
 	writer = csv.writer(output_file)
-
+	ctr =1
 	for f in sorted(os.listdir(folder)):
+		print (ctr)
 		inputFile = open(os.path.join(folder,f),"r")
 		reader = list(csv.reader(inputFile))
 		tweet = reader[1][2]
-		tweet = " ".join(remove_stop_words(tweet))
-		print tweet
+		#tweet = " ".join(remove_stop_words(tweet))
+		print (tweet)
 		output = contrastingFeatures(tweet)
-		print output
-
+		print (output)
+		output.append(label)
 		writer.writerow(output)
-		print output
+		print (output)
+		ctr=ctr+1
 
 	return
 
@@ -143,7 +145,7 @@ def main():
 		for line in file2:
 			key = line.split(",")[0]
 			val = line.split(",")[1]
-			bidict[key]=float(val)
+			tridict[key]=float(val)
 	file2.close()
 
 	# tweet = "i love getting spam mails"
@@ -151,10 +153,11 @@ def main():
 	# print tweet
 	# contrastingFeatures(tweet)
 	pwd = os.getcwd()
-	normal = pwd + "/normal_with_past_PP"
-	sarcastic = pwd + "/sarcastic_with_past"
-	writeFile(normal, "feature1_norm.csv")
-	writeFile(sarcastic, "feature1_sarcastic.csv")
+	sys.path.append(pwd)
+	normal = pwd + "/../dataset/normal_with_past_PP"
+	sarcastic = pwd + "/../dataset/sarcastic_with_past_PP"
+	writeFile(normal, "feature1CC.csv",0)
+	writeFile(sarcastic, "feature1CC.csv",1)
 
 
 
