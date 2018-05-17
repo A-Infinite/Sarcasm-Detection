@@ -104,6 +104,15 @@ def extractFeatureOfASentence(sen):
         features.append(pol)
         features.append(sub)
     features.append(np.abs(ma - mi))
+    
+    t=23-len(features)
+    i=0
+    while (i<t) :
+        features.append(0)
+        i=i+1
+    print(sen)
+    print(features)
+    print(len(features))
 
     return features
 
@@ -137,7 +146,7 @@ def main():
     pwd = os.getcwd()
     norm = pwd + "/../dataset/normal_with_past_PP"
     sarc = pwd + "/../dataset/sarcastic_with_past_PP"
-    opcsvfile = open("feature8.csv","a")
+    opcsvfile = open("feature8polarity.csv","a")
     writeFile(norm,opcsvfile,0)
     writeFile(sarc,opcsvfile,1)
     opcsvfile.close()

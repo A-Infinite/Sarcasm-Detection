@@ -1,0 +1,14 @@
+Algorithm,New Model
+Gaussian Naive Bayes,0.536184
+SVM rbf,0.5457697
+Decision Tree,0.534539
+Random Forest,0.541118
+Adaboost,0.552631
+Bagging Classifier,0.521381
+Extra trees,0.532894
+Gradient boosting,0.569078
+L1 Logistic Regression,0.550986
+L2 Logistic Regression,0.550986
+Stochastic Gradient Descent,0.470394
+SVM polynomial,0.557046
+MLP Classifier,0.521381
