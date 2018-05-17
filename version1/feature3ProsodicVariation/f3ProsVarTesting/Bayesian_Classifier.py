@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 x = []
 y = []
 
-with open('feature2transProb.csv') as csvfile:
+with open('feature3ProsVar.csv') as csvfile:
 	reader = csv.reader(csvfile, delimiter = ' ')
 	for row in reader:
 		x.append(row[0: (len(row))])
