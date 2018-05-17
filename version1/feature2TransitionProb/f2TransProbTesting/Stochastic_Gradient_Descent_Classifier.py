@@ -7,7 +7,7 @@ from sklearn.linear_model import SGDClassifier
 x = []
 y = []
 
-with open('feature1CC.csv') as csvfile:
+with open('feature2transProb.csv') as csvfile:
 	reader = csv.reader(csvfile, delimiter = ' ')
 	for row in reader:
 		x.append(row[0: (len(row))])

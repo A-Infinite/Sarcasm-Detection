@@ -23,7 +23,7 @@ for i in x:
 Y = []
 for i in y:
 	Y.append(i)
-
+'''
 for j in range(72, 78):
 	temp0 = []
 	for i in X:
@@ -39,9 +39,10 @@ for j in range(72, 78):
 
 	for i in X:
 		i[j] = tempdict0[i[j]]
-
+'''
 #print(str(X[0]) + "\n")
 #print(str(X[0])  + "     " + str(Y[4000]) + "\n")
+
 
 X = np.asarray(X)
 Y = np.asarray(Y)

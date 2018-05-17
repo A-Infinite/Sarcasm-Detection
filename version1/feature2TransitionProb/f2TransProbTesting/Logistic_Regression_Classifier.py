@@ -1,13 +1,17 @@
 import numpy as np
+import pandas as pd
 import csv
+from sklearn import svm
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.linear_model import SGDClassifier
+from sklearn import tree
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
 
 x = []
 y = []
 
-with open('feature1CC.csv') as csvfile:
+with open('feature2transProb.csv') as csvfile:
 	reader = csv.reader(csvfile, delimiter = ' ')
 	for row in reader:
 		x.append(row[0: (len(row))])
@@ -45,18 +49,29 @@ for i in Y:
 		temp.append(float(j))
 	y.append(temp)
 
-print(y[0])
+#print(y[0])
 
 x = np.asarray(x)
 y = np.asarray(y)
 
-#SGDClassifier
+#Logistic Regression l1 classifier
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.1, random_state = 42)
 
-clf = SGDClassifier()
-clf.fit(x_train, y_train)
+clfl1 = LogisticRegression(penalty = 'l1')
+clfl1.fit(x_train, y_train)
 
-print("SGDClassifier")
-print(clf.score(x_test, y_test))
+print("Logistic Regression l1 type classifier")
+print(clfl1.score(x_test, y_test))
+print("\n")
+
+#Logistic Regression l2 classifier
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.1, random_state = 42)
+
+clfl2 = LogisticRegression(penalty = 'l2')
+clfl2.fit(x_train, y_train)
+
+print("Logistic Regression l2 type classifier")
+print(clfl2.score(x_test, y_test))
 print("\n")
