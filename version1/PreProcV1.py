@@ -78,10 +78,10 @@ def main():
     
     pwd = os.getcwd();
     sys.path.append(pwd)
-    norm_in = pwd + "../dataset/normal_with_past"
-    norm_out = pwd + "../dataset/normal_with_past_PP"
-    sarc_in = pwd + "../dataset/sarcastic_with_past"
-    sarc_out = pwd + "../dataset/sarcastic_with_past_PP"
+    norm_in = pwd + "/../dataset/normal_with_past"
+    norm_out = pwd + "/../dataset/normal_with_past_PP"
+    sarc_in = pwd + "/../dataset/sarcastic_with_past"
+    sarc_out = pwd + "/../dataset/sarcastic_with_past_PP"
     
     # preprocessing normal tweets
     for f in os.listdir(norm_in):
@@ -107,7 +107,7 @@ def main():
         writer=csv.writer(outputFile)
         for row in reader:
             #print (row[2])
-            #row[2]=preprocess(row[2])
+            row[2]=preprocess(row[2])
             writer.writerow(row)
         inputFile.close()
         outputFile.close()

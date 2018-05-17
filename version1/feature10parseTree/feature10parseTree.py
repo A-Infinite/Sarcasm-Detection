@@ -82,10 +82,10 @@ def check_sarc(tweet):
 			psf.append(i)
 		elif blob.polarity == 0:
 			pass	
-	print (PSF)
-	print (NSF)
-	print (psf)
-	print (nsf)
+	#print (PSF)
+	#print (NSF)
+	#print (psf)
+	#print (nsf)
 	if (PSF and nsf) or (psf and NSF):
 		return [1]
 	else:
@@ -93,13 +93,19 @@ def check_sarc(tweet):
     
 def writeFile(folder, csvfile,label):
 	f5 = csv.writer(csvfile,delimiter=",")
+	ctr=1
 	for f in sorted(os.listdir(folder)):
+		print(ctr)
 		inputFile = open(os.path.join(folder,f),"r")
 		reader = list(csv.reader(inputFile))
+		print(os.path.join(folder,f))
+
 		tweet = reader[1][2]
+		print(tweet)
 		featurelist=check_sarc(tweet)
 		featurelist.append(label)
 		f5.writerow(featurelist)
+		ctr=ctr+1
 
 def main():
     pwd = os.getcwd()

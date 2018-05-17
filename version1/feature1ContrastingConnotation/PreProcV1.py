@@ -107,7 +107,7 @@ def main():
         writer=csv.writer(outputFile)
         for row in reader:
             #print (row[2])
-            #row[2]=preprocess(row[2])
+            row[2]=preprocess(row[2])
             writer.writerow(row)
         inputFile.close()
         outputFile.close()

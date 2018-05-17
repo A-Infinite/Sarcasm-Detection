@@ -29,7 +29,7 @@ def get_pragmatic_features(tweet_tokens):
     tweet_len_tokens = len(tweet_tokens)  # get the length of the tweet in tokens
     average_token_length = float(tweet_len_tokens) / max(1.0, float(tweet_len_ch))  # average tweet length
     feature_list = [tweet_len_ch,  tweet_len_tokens,  average_token_length, capitalized_words, user_specific, negations, affirmatives, interjection,  intensifier, punct]
-    print(feature_list)
+    #print(feature_list)
     return feature_list
 
 
@@ -51,27 +51,30 @@ intensifiers = ["amazingly", "astoundingly", "awful", "bare", "bloody", "crazy",
                 "outrageously", "phenomenally", "precious", "quite", "radically", "rather",
                 "really", "remarkably", "right", "sick", "strikingly", "super", "supremely",
                 "surprisingly", "terribly", "terrifically", "too", "totally", "uncommonly",
-                "unusually", "veritable", "very", "wicked"]
+                "unusually", "veritable", "very", "wicked", "so" , "very"]
 
 def writeFile(folder, csvfile,label):
     outfile = csv.writer(csvfile,delimiter=",")
+    ctr=1
     for f in sorted(os.listdir(folder)):
-            inputFile = open(os.path.join(folder,f),"r")
-            reader = list(csv.reader(inputFile))
-            #print(reader)
-            tweet = reader[1][2]
-            tweet =tweet.strip()
-            tokenizer = nltk.tokenize.TreebankWordTokenizer()
-            tweet_tokens=tokenizer.tokenize(tweet)
-            print(tweet_tokens)
-            feature_list=get_pragmatic_features(tweet_tokens)
-            feature_list.append(label)
-            outfile.writerow(feature_list)
+    	print(ctr)
+    	inputFile = open(os.path.join(folder,f),"r")
+    	reader = list(csv.reader(inputFile))
+    	#print(reader)
+    	tweet = reader[1][2]
+    	tweet =tweet.strip()
+    	tokenizer = nltk.tokenize.TreebankWordTokenizer()
+    	tweet_tokens=tokenizer.tokenize(tweet)
+    	print(tweet_tokens)
+    	feature_list=get_pragmatic_features(tweet_tokens)
+    	feature_list.append(label)
+    	outfile.writerow(feature_list)
+    	ctr=ctr+1
 
 def main():
     pwd = os.getcwd()
-    norm = pwd + "/../dataset/normal_with_past_PP"
-    sarc = pwd + "/../dataset/sarcastic_with_past_PP"
+    norm = pwd + "/../newdatasetForF9/normal_with_past_PP"
+    sarc = pwd + "/../newdatasetForF9/sarcastic_with_past_PP"
     csvfile = open("feature9pragmatic.csv","a")
     writeFile(norm,csvfile,0)
     writeFile(sarc,csvfile,1)
