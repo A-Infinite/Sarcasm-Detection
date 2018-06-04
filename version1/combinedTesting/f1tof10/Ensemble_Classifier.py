@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, BaggingClassifier, ExtraTreesClassifier, GradientBoostingClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score
 
 x = []
 y = []
@@ -40,6 +41,9 @@ clf.fit(x_train, y_train)
 print("Random Forest classifier")
 print(clf.score(x_test, y_test))
 print("\n")
+scores = cross_val_score(clf, X, Y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 #Adaboost Classifier
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size = 0.1, random_state = 42)
@@ -50,6 +54,11 @@ clf.fit(x_train, y_train)
 print("AdaBoost classifier")
 print(clf.score(x_test, y_test))
 print("\n")
+
+scores = cross_val_score(clf, X, Y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
 
 #BaggingClassifier
 
@@ -62,6 +71,12 @@ print("Bagging classifier")
 print(clf.score(x_test, y_test))
 print("\n")
 
+
+
+scores = cross_val_score(clf, X, Y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
 #ExtraTreesClassifier
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size = 0.1, random_state = 42)
@@ -73,6 +88,12 @@ print("ExtraTrees classifier")
 print(clf.score(x_test, y_test))
 print("\n")
 
+
+scores = cross_val_score(clf, X, Y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+
 #GradientBoostingClassifier
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size = 0.1, random_state = 42)
@@ -83,6 +104,12 @@ clf.fit(x_train, y_train)
 print("GradientBoostingClassifier")
 print(clf.score(x_test, y_test))
 print("\n")
+
+
+scores = cross_val_score(clf, X, Y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
 '''
 #Just Something
 

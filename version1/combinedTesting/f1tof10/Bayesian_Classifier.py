@@ -3,6 +3,8 @@ import csv
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import KFold 
+from sklearn.model_selection import cross_val_score
 
 x = []
 y = []
@@ -62,7 +64,8 @@ print("Naive Bayes classifier : ")
 print(clfnb.score(x_test, y_test))
 print("\n")
 
-
-
+scores = cross_val_score(clfnb, x, y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 #******************************************************************************************

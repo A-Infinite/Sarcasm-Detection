@@ -7,6 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn import tree
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import cross_val_score
 
 x = []
 y = []
@@ -65,6 +66,11 @@ print("Logistic Regression l1 type classifier")
 print(clfl1.score(x_test, y_test))
 print("\n")
 
+scores = cross_val_score(clfl1, x, y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+
 #Logistic Regression l2 classifier
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.1, random_state = 42)
@@ -75,3 +81,7 @@ clfl2.fit(x_train, y_train)
 print("Logistic Regression l2 type classifier")
 print(clfl2.score(x_test, y_test))
 print("\n")
+scores = cross_val_score(clfl2, x, y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+

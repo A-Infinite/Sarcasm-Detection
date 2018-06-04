@@ -3,6 +3,7 @@ import csv
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import SGDClassifier
+from sklearn.model_selection import cross_val_score
 
 x = []
 y = []
@@ -60,3 +61,8 @@ clf.fit(x_train, y_train)
 print("SGDClassifier")
 print(clf.score(x_test, y_test))
 print("\n")
+
+scores = cross_val_score(clf, x, y, cv=10)
+print (scores)
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
