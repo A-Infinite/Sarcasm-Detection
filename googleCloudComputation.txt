@@ -1,0 +1,11 @@
+1. To upload a file from desktop
+
+gcloud compute scp <local path of file> <username>@instance-1:<remote path of folder>
+
+for example: gcloud compute scp C:\Users\Shivam-PC\Desktop\BTP\tes_dataset.zip kharsh762@instance-1:/home/kharsh762/BTP/Dataset
+
+2. To download a file from gcloud
+
+gcloud compute scp <username>@instance-1:<remote path of file> <local path of folder>
+
+for example: gcloud compute scp kharsh762@instance-1:/home/kharsh762/BTP/Dataset/test_output.txt C:\Users\Shivam-PC\Desktop\ 
